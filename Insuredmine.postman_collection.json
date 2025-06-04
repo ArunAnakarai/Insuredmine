@@ -1,0 +1,83 @@
+{
+	"info": {
+		"_postman_id": "8a7c5409-9695-4892-abdb-2fcfcd1c7a13",
+		"name": "Insuredmine",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "13180249"
+	},
+	"item": [
+		{
+			"name": "server run",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": "http://localhost:4000/api/upload"
+			},
+			"response": []
+		},
+		{
+			"name": "fileupload",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "file",
+							"type": "file",
+							"src": "/C:/Users/anaka/Downloads/data-sheet - Node js Assesment (2) (1).csv"
+						}
+					]
+				},
+				"url": "http://localhost:4000/api/upload"
+			},
+			"response": []
+		},
+		{
+			"name": "search",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"username\": \"Torie Buchanan\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:4000/api/policy/search"
+			},
+			"response": []
+		},
+		{
+			"name": "aggregate",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:4000/api/policy/aggregate"
+			},
+			"response": []
+		},
+		{
+			"name": "schedule",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"message\": \"Backup DB\",\r\n  \"day\": \"2025-06-10\",\r\n  \"time\": \"14:30\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:4000/schedule"
+			},
+			"response": []
+		}
+	]
+}
